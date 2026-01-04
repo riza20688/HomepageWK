@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warken | Warung Kenyang</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/logo-resto.png">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-orange-600">WARKEN</h1>
+        
+        <ul class="flex space-x-6 font-medium items-center">
+            <li><a href="#home" class="hover:text-orange-500">Home</a></li>
+            <li><a href="menu.html" class="hover:text-orange-500">Menu</a></li>
+            <li><a href="#cabang" class="hover:text-orange-500">Cabang</a></li>
+            <li>
+                <a href="https://wa.me/6281234567890?text=Halo%20RestoKita,%20saya%20ingin%20melakukan%20reservasi%20tempat." 
+                   target="_blank" 
+                   class="bg-orange-600 text-white px-5 py-2 rounded-full font-bold hover:bg-orange-700 transition-all shadow-md inline-block">
+                    Reservasi
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <section id="home" class="relative">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide text-white text-center px-4">
+                    <img src="img/John_Xina.webp" alt="Slide 1">
+                    <div class="overlay"></div>
+                </div>
+                <div class="swiper-slide text-white text-center px-4">
+                    <img src="images/slide2.jpg" alt="Slide 2">
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+<section id="tentang" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+            
+            <div class="w-full lg:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 relative inline-block">
+                    Sejarah Warken
+                    <div class="h-1 w-20 bg-orange-500 mt-2"></div>
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-4 text-lg">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    Masukan Teks...
+                </p>
+            </div>
+
+            <div class="w-full lg:w-1/2 grid grid-cols-1 gap-6">
+                <div class="bg-orange-50 p-8 rounded-2xl border-l-8 border-orange-500 shadow-sm hover:shadow-md transition">
+                    <h4 class="text-xl font-bold text-orange-700 mb-2 flex items-center gap-2">
+                        <span>🎯</span> Visi Kami
+                    </h4>
+                    <p class="text-gray-700">
+                        Menjadi restoran keluarga pilihan utama yang menyajikan kebahagiaan melalui hidangan lezat dan pelayanan yang hangat di seluruh Indonesia.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border-l-8 border-gray-800 shadow-sm hover:shadow-md transition">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                        <span>🚀</span> Misi Kami
+                    </h4>
+                    <ul class="text-gray-700 space-y-2 list-disc list-inside">
+                        <li>Menjaga kualitas rasa dengan bahan baku segar pilihan.</li>
+                        <li>Memberikan harga yang kompetitif tanpa mengurangi kualitas.</li>
+                        <li>Menciptakan lingkungan kerja yang nyaman dan penuh kekeluargaan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="menu" class="py-10 bg-white">
+    <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-16">Daftar Menu & Harga</h3>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-16">
+            
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">
+                        MENU FAVORIT
+                    </span>
+                    <img src="img/menu1.jpg" alt="Menu 1" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg">Nasi Goreng Spesial</h4>
+                    
+                </div>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/menu2.jpg" alt="Menu 2" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg">Mie Ayam Jamur</h4>                   
+                </div>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/menu1.jpg" alt="Menu 3" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg">Es Teh Manis</h4>
+                    
+                </div>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/menu2.jpg" alt="Menu 4" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg">Ayam Bakar</h4>
+                    
+                </div>
+            </div>
+
+            </div>
+    </div>
+    <div class="text-center mt-16">
+        <p class="text-gray-500 mb-4">Ingin melihat pilihan lainnya?</p>
+        <a href="menu.html" class="inline-block bg-white border-2 border-orange-600 text-orange-600 px-10 py-3 rounded-full font-bold hover:bg-orange-600 hover:text-white transition-all shadow-md">
+            Lihat Semua 46 Menu Kami
+        </a>
+    </div>
+</section>
+<section id="review" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Apa Kata Mereka?</h2>
+            <p class="text-gray-600">Intip ulasan jujur dari para foodvloger yang ada di youtube.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-white p-4 rounded-2xl shadow-md transition hover:shadow-xl">
+                <div class="aspect-video rounded-xl overflow-hidden mb-4">
+                    <iframe class="w-full h-full" 
+                        src="https://www.youtube.com/embed/5Up02YABwhc?si=wT5vU2lfapH8uEWy" 
+                        title="Review Video 1" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <h4 class="font-bold text-lg px-2 text-center">Review dari FoodVlogger A</h4>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl shadow-md transition hover:shadow-xl">
+                <div class="aspect-video rounded-xl overflow-hidden mb-4">
+                    <iframe class="w-full h-full" 
+                        src="https://www.youtube.com/embed/xFn6AGPfI_U?si=j_9l0C6YT7SMkCMq" 
+                        title="Review Video 2" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <h4 class="font-bold text-lg px-2 text-center">Review dari FoodVlogger B</h4>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl shadow-md transition hover:shadow-xl">
+                <div class="aspect-video rounded-xl overflow-hidden mb-4">
+                    <iframe class="w-full h-full" 
+                        src="https://www.youtube.com/embed/F2Zh7DHks0E?si=MQh0Zww4vwXnqP9s" 
+                        title="Review Video 3" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <h4 class="font-bold text-lg px-2 text-center">Review dari FoodVlogger C</h4>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <section id="cabang" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="mb-12 text-center lg:text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 relative inline-block">
+                Lokasi Cabang
+                <div class="h-1 w-20 bg-orange-500 mt-2"></div>
+            </h2>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row gap-6 lg:gap-12">
+            
+            <div class="w-full lg:w-2/3 h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg border-2 border-gray-100">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4025.0176067204516!2d106.86199069932036!3d-6.184156569525343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5817783c37d%3A0xdaa84c27cd14b2e7!2sWARKEN%20-%20Warung%20Kenyang%2C%20Johar%20Baru!5e0!3m2!1sid!2sid!4v1766770149327!5m2!1sid!2sid" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="w-full lg:w-1/3 flex flex-col justify-between">
+                <div class="mb-6 space-y-2 text-center lg:text-left">
+                    <h4 class="text-xl font-bold text-gray-800">Warken Jakarta</h4>
+                    <p class="text-gray-600">Jl. Jakarta Pusat</p>
+                    <p class="text-orange-600 font-semibold">Buka: 09.00 - 21.00 WIB</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <a href="#" target="_blank" 
+                       class="flex items-center justify-center gap-3 bg-blue-600 text-white py-4 rounded-xl font-bold active:scale-95 transition shadow-lg">
+                        <span class="text-xl">📍</span> Buka Google Maps
+                    </a>
+
+                    <a href="https://wa.me/6281234567890" target="_blank" 
+                       class="flex items-center justify-center gap-3 bg-green-500 text-white py-4 rounded-xl font-bold active:scale-95 transition shadow-lg">
+                        <span class="text-xl">💬</span> Chat WhatsApp
+                    </a>
+
+                    <a href="#" target="_blank" 
+                       class="flex items-center justify-center gap-3 bg-orange-600 text-white py-4 rounded-xl font-bold active:scale-95 transition shadow-lg">
+                        <span class="text-xl">🍕</span> Order Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="cabang" class="py-20 bg-gray-50"> <div class="container mx-auto px-4">
+        
+        <div class="flex flex-col lg:flex-row gap-8 items-stretch"> <div class="w-full lg:w-2/3 min-h-[300px] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24172078!2d106.789155!3d-6.2297465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e16723abb5%3A0xbfaf2830f69466e8!2sJakarta%20Pusat!5e0!3m2!1sid!2sid!4v1700000000000" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; min-height: 400px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="w-full lg:w-1/3 flex flex-col justify-center bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+                <div class="mb-8 text-center lg:text-left">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Warken Bekasi</h4>
+                    <p class="text-gray-600 flex items-center justify-center lg:justify-start gap-2">
+                        <span>🏢</span> Jl. Bekasi
+                    </p>
+                    <p class="text-orange-600 font-bold mt-2 flex items-center justify-center lg:justify-start gap-2">
+                        <span>⏰</span> 12.00 - 21.30 WIB
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="#" target="_blank" 
+                       class="flex items-center justify-center gap-3 bg-blue-600 text-white py-4 rounded-2xl font-bold hover:bg-blue-700 hover:-translate-y-1 transition-all shadow-md active:scale-95">
+                        Buka Google Maps
+                    </a>
+
+                    <a href="https://wa.me/6281234567890" target="_blank" 
+                       class="flex items-center justify-center gap-3 bg-green-500 text-white py-4 rounded-2xl font-bold hover:bg-green-600 hover:-translate-y-1 transition-all shadow-md active:scale-95">
+                        Chat WhatsApp
+                    </a>
+
+                    <a href="#" target="_blank" 
+                       class="flex items-center justify-center gap-3 bg-orange-600 text-white py-4 rounded-2xl font-bold hover:bg-orange-700 hover:-translate-y-1 transition-all shadow-md active:scale-95">
+                        Order Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold text-orange-500">Warken</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Masukan Teks...
+                </p>
+                <div class="flex space-x-4 pt-2">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><span class="text-sm">IG</span></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><span class="text-sm">FB</span></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><span class="text-sm">WA</span></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6">Navigasi</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="index.html" class="hover:text-orange-500 transition">Beranda</a></li>
+                    <li><a href="menu.html" class="hover:text-orange-500 transition">Daftar Menu</a></li>
+                    <li><a href="#cabang" class="hover:text-orange-500 transition">Lokasi Cabang</a></li>
+                    <li><a href="https://wa.me/6281234567890" class="hover:text-orange-500 transition">Reservasi Online</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6">Hubungi Kami</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex items-start gap-3">
+                        <span>📍</span> Jl. Jakarta Pusat
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>📞</span> (021) 1234-5678
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>⏰</span> Senin - Minggu: 10:00 - 21:00
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+            <p class="text-gray-500 text-xs">
+                &copy; 2026 Warken. Semua Hak Dilindungi.
+            </p>
+        </div>
+    </div>
+</footer>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+        class="fixed bottom-24 right-6 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-black transition">
+    ↑
+</button>
+<a href="https://wa.me/62895334186547?text=Halo%20RestoKita,%20saya%20mau%20tanya%20tentang%20menu%20dan%20harga." 
+   target="_blank" 
+   class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all transform hover:scale-110 flex items-center justify-center z-[100]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.14-1.086c1.158.633 2.459.969 3.783.969h.008c4.368 0 7.926-3.558 7.93-7.93a7.855 7.855 0 0 0-2.32-5.619l-.002-.003zM7.994 14.52a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+</a>
+<script src="script.js">
+</script>
+</body>
+</html>
