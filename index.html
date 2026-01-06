@@ -15,21 +15,37 @@
 
     <nav class="bg-white/80 backdrop-blur-md shadow-md p-4 sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
-        <img src="img/logo_wk.png" alt="Warken Logo" class="h-10 w-auto">
-        <h1 class="text-2xl font-bold text-orange-600">WARKEN</h1>
         
-        <ul class="flex space-x-6 font-medium items-center">
-            <li><a href="#home" class="hover:text-orange-500">Home</a></li>
-            <li><a href="menu.html" class="hover:text-orange-500">Menu</a></li>
-            <li><a href="#cabang" class="hover:text-orange-500">Cabang</a></li>
+        <a href="#home" class="flex items-center gap-3">
+            <img src="img/logo_wk.png" alt="Warken Logo" class="h-10 w-auto">
+            <h1 class="text-2xl font-bold text-orange-600">WARKEN</h1>
+        </a>
+        
+        <ul class="hidden md:flex space-x-6 font-medium items-center">
+            <li><a href="#home" class="hover:text-orange-500 transition">Home</a></li>
+            <li><a href="menu.html" class="hover:text-orange-500 transition">Menu</a></li>
+            <li><a href="#cabang" class="hover:text-orange-500 transition">Cabang</a></li>
             <li>
                 <a href="https://forms.gle/icxv7yxqN8pBqgvz7" 
                    target="_blank" 
-                   class="bg-orange-600 text-white px-5 py-2 rounded-full font-bold hover:bg-orange-700 transition-all shadow-md inline-block">
+                   class="bg-orange-600 text-white px-5 py-2 rounded-full font-bold hover:bg-orange-700 transition-all shadow-md">
                     Reservasi
                 </a>
             </li>
         </ul>
+
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-orange-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t mt-4 pb-4 space-y-4 px-4 text-center">
+        <a href="#home" class="block py-2 hover:text-orange-500">Home</a>
+        <a href="menu.html" class="block py-2 hover:text-orange-500">Menu</a>
+        <a href="#cabang" class="block py-2 hover:text-orange-500">Cabang</a>
+        <a href="https://forms.gle/icxv7yxqN8pBqgvz7" class="block bg-orange-600 text-white py-3 rounded-xl font-bold">Reservasi</a>
     </div>
 </nav>
 
@@ -245,7 +261,7 @@
                        <span>Google Maps</span>
                     </a>
 
-                    <a href="https://wa.me/6281234567890" target="_blank" 
+                    <a href="https://wa.me/6285156925327" target="_blank" 
    class="flex items-center justify-center gap-3 bg-green-500 text-white py-4 rounded-2xl font-bold hover:bg-green-600 hover:-translate-y-1 transition-all shadow-md active:scale-95">
     
     <i class="fab fa-whatsapp text-2xl"></i> 
@@ -295,7 +311,7 @@
                        <span>Google Maps</span>
                     </a>
 
-                    <a href="https://wa.me/6281234567890" target="_blank" 
+                    <a href="https://wa.me/6285973114848" target="_blank" 
    class="flex items-center justify-center gap-3 bg-green-500 text-white py-4 rounded-2xl font-bold hover:bg-green-600 hover:-translate-y-1 transition-all shadow-md active:scale-95">
     
     <i class="fab fa-whatsapp text-2xl"></i> 
@@ -324,9 +340,9 @@
                     Masukan Teks...
                 </p>
                 <div class="flex space-x-4 pt-2">
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><span class="text-sm">IG</span></a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><span class="text-sm">FB</span></a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><span class="text-sm">WA</span></a>
+                    <i href="https://instagram.com/warken_jkt" class="fa-brands fa-instagram text-2xl w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"></i>
+                    <i href="https://instagram.com/warken_bks" class="fa-brands fa-instagram text-2xl w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"></i>
+                    <i href="https://wa.me/6285156925327" class="fab fa-whatsapp text-2xl w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"></i>
                 </div>
             </div>
 

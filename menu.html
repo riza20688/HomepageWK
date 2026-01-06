@@ -5,26 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Menu Lengkap | Warken</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         .filter-active { @apply bg-orange-600 text-white shadow-lg; }
     </style>
 </head>
 <body class="bg-gray-50">
 
-    <nav class="bg-white shadow-md p-4 sticky top-0 z-[100]">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-orange-600">Warken</h1>
-            <ul class="flex space-x-6 font-medium text-gray-700">
-                <li><a href="index.html" class="hover:text-orange-500">Home</a></li>
-                <li><a href="menu.html" class="text-orange-600 font-bold border-b-2 border-orange-600">Menu</a></li>
-            </ul>
-        </div>
-    </nav>
+    <nav class="bg-white/80 backdrop-blur-md shadow-md p-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="img/logo_wk.png" alt="Warken Logo" class="h-10 w-auto">
+            <h1 class="text-2xl font-bold text-orange-600">WARKEN</h1>
+        </a>
+        
+        <ul class="hidden md:flex space-x-6 font-medium items-center">
+            <li><a href="index.html" class="hover:text-orange-500 transition">Home</a></li>
+            <li><a href="menu.html" class="hover:text-orange-500 transition">Menu</a></li>
+            <li>
+                <a href="https://forms.gle/icxv7yxqN8pBqgvz7" 
+                   target="_blank" 
+                   class="bg-orange-600 text-white px-5 py-2 rounded-full font-bold hover:bg-orange-700 transition-all shadow-md">
+                    Reservasi
+                </a>
+            </li>
+        </ul>
 
-    <header class="bg-orange-100 py-12 text-center">
-        <h2 class="text-4xl font-extrabold text-gray-800 mb-2">Menu Kami</h2>
-        <p class="text-gray-600">Pilih kategori untuk menemukan hidangan favoritmu</p>
-    </header>
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-orange-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t mt-4 pb-4 space-y-4 px-4 text-center">
+        <a href="/" class="block py-2 hover:text-orange-500">Home</a>
+        <a href="/menu" class="block py-2 hover:text-orange-500">Menu</a>
+        <a href="https://forms.gle/icxv7yxqN8pBqgvz7" class="block bg-orange-600 text-white py-3 rounded-xl font-bold">Reservasi</a>
+    </div>
+</nav>
+
+    <header class="relative bg-gray-900 py-24 text-center overflow-hidden">
+    <img src="img/banner.jpg" alt="Background Menu" 
+         class="absolute inset-0 w-full h-full object-cover opacity-60">
+
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <div class="relative z-10 container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">
+            Menu Kami
+        </h2>
+        <p class="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
+            Pilih kategori untuk menemukan hidangan favoritmu yang dimasak dengan cinta dan bahan pilihan.
+        </p>
+    </div>
+</header>
 
     <section id="menu-utama" class="py-20 bg-white">
     <div class="container mx-auto px-4">
@@ -39,38 +77,56 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-16 mb-20">
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">FAVORIT</span>
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">
+                        MENU FAVORIT
+                    </span>
+                    <img src="img/katsu_cur.jpg" alt="Menu 1" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nasi Goreng Spesial</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg">Nasi Katsu Curry</h4>
+                    
                 </div>
             </div>
+
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">FAVORIT</span>
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">
+                        MENU FAVORIT
+                    </span>
+                    <img src="img/nasgor_hk.jpg" alt="Menu 2" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nasi Goreng Spesial</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg">Nasi Goreng Hongkong</h4>                   
                 </div>
             </div>
+
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">FAVORIT</span>
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">
+                        MENU FAVORIT
+                    </span>
+                    <img src="img/nasgor_wk.jpg" alt="Menu 3" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nasi Goreng Spesial</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg">Nasi Goreng Warken</h4>
+                    
                 </div>
             </div>
+
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">FAVORIT</span>
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">
+                        MENU FAVORIT
+                    </span>
+                    <img src="img/ebi_curr.jpg" alt="Menu 4" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nasi Goreng Spesial</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg">Nasi Ebi Curry</h4>
+                    
                 </div>
             </div>
         </div>
@@ -85,34 +141,86 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-16 mb-20">
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/naskar.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Mie Ayam Jamur</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">NasKarrage POR/LTE</h4>
                 </div>
             </div>
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/nasmie.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Mie Ayam Jamur</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nasmie Single/Double</h4>
                 </div>
             </div>
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/indomie_kt.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Mie Ayam Jamur</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Indomie Goreng</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Single/Double/Triple/Quad</h4>
                 </div>
             </div>
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/indomie_ijo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Mie Ayam Jamur</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Indomie Goreng Cabe Ijo</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Single/Couple</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/nashetti.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nashetti</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/saladsu.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Saladsu</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/dualisme.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nasi Katsu Dualisme</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/sosis_curr.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nasi Sosis Curry</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/nasi_kat.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nasi Katsu</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">POR/LTE</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/sp_katsu.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Spaghetti Katsu</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">POR/LTE</h4>
                 </div>
             </div>
             </div>
@@ -127,41 +235,183 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-16 mb-20">
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/logo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Es Teh Manis</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Milo Dinosaur</h4>
                 </div>
             </div>
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/milo_oval_mc.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Es Teh Manis</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Milo Coffe</h4>
                 </div>
             </div>
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/milo_oval_mc.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Es Teh Manis</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Milo</h4>
                 </div>
             </div>
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/milo_oval_mc.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Es Teh Manis</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Ovaltine</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/teh_tarik.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Teh Tarik</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/fantsu.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Fanta Susu Hampir Gembira</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/coca.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Coca Cola</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/sarsapa.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Sarsaparilla</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/cebe.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Coffe Beer</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/temuwk.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Temulawak</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/lemont.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Lemon Tea</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/leciti.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Lychee Tea</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/aquah.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Aqua 600ml</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/lemine.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Le Mineral 600ml</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/logo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Goodday</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Cappucino/Freeze/Vanilla</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/logo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nutrisari</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Blewah/Jeruk Peras/Jeruk Nipis</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Milky Orange/Sweet Manggo</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/fluto.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Air Mineral</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/tehmanies.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Teh Manis</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Panas/Dingin</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/tehmanies.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Teh Tawar</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Panas/Dingin</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/estehjb.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Es Teh Jumbo</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/nescafe.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nescafe Black</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Panas/Dingin</h4>
                 </div>
             </div>
             </div>
 
         <div class="mb-10 pt-10 border-t border-gray-100">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-800 relative inline-block">
-                Camilan & Dessert
+                Camillan & A'la Carte
                 <div class="h-1 w-20 bg-orange-500 mt-2"></div>
             </h2>
         </div>
@@ -169,38 +419,69 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-16">
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/epep.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Kentang Goreng</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">French Fries</h4>
                 </div>
             </div>
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/italian.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Kentang Goreng</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Italian Fries</h4>
                 </div>
             </div>
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/logo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Kentang Goreng</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Sosis A'la Carte</h4>
                 </div>
             </div>
             <div class="group cursor-pointer">
                 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
-                    <img src="img/menu1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="img/ebiala.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
                 <div class="text-center">
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Kentang Goreng</h4>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Ebi Furai A'la Carte</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/katsuala.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Katsu A'la Carte</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/logo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Indomie Goreng</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/logo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Spaghetti Bolonese</h4>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 shadow-sm group-hover:shadow-md transition">
+                    <img src="img/logo.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="text-center">
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg mb-2">Nasi Putih</h4>
                 </div>
             </div>
             </div>
-
     </div> 
 </section>
 
@@ -214,9 +495,9 @@
                     Masukan Teks..
                 </p>
                 <div class="flex space-x-4 pt-2">
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><span class="text-sm">IG</span></a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><span class="text-sm">FB</span></a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"><span class="text-sm">WA</span></a>
+                    <i href="https://instagram.com/warken_jkt" class="fa-brands fa-instagram text-2xl w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"></i>
+                    <i href="https://instagram.com/warken_bks" class="fa-brands fa-instagram text-2xl w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"></i>
+                    <i href="https://wa.me/6285156925327" class="fab fa-whatsapp text-2xl w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"></i>
                 </div>
             </div>
 
@@ -234,13 +515,13 @@
                 <h4 class="text-lg font-bold mb-6">Hubungi Kami</h4>
                 <ul class="space-y-4 text-gray-400 text-sm">
                     <li class="flex items-start gap-3">
-                        <span>📍</span> Jl. Jakarta Pusat
+                        <span>📍</span> Jl. Johar baru utara RT06/05 NO.4, Daerah Khusus Ibukota Jakarta 10560
                     </li>
                     <li class="flex items-center gap-3">
                         <span>📞</span> (021) 1234-5678
                     </li>
                     <li class="flex items-center gap-3">
-                        <span>⏰</span> Senin - Minggu: 10:00 - 21:00
+                        <span>⏰</span> Senin - Minggu: 09:00 - 21:00
                     </li>
                 </ul>
             </div>
@@ -278,6 +559,12 @@
                 }
             });
         }
+        const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
     </script>
 </body>
 </html>
